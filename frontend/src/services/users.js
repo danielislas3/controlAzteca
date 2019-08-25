@@ -1,5 +1,5 @@
 import axios from 'axios'
-const baseURL = 'http://localhost:3000'
+const baseURL = 'https://guarded-forest-20744.herokuapp.com'
 const loggedUser = JSON.parse(localStorage.getItem('loggedUser'))
 class GastoService {
   
