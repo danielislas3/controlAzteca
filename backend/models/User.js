@@ -5,6 +5,7 @@ const userSchema = new Schema({
     name: String,
     apellido: String,
     telephone: Number,
+    fechaNac: String,
     email: String,
     street: String,
     numI: Number,
