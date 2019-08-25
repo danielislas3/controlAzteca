@@ -41,9 +41,10 @@ const authService = new AuthService()
         </Dropdown>
          <Menu.Menu position='right'>
           <Dropdown.Item><a href="#" onClick={handleLogout}>Cerrar Sesión</a></Dropdown.Item>
-          <a href="https://www.aprendeycrece.mx/Articulos/TusFinanzas/19">
+          
+            <a href="https://www.aprendeycrece.mx/Articulos/TusFinanzas/19">
               <Menu.Item  >           
-                <Image size='small' src='img/arbolicon.png' style={{ marginRight: '1.5em' }} />
+                <Image size='medium' src='img/arbolicon.png' style={{ marginRight: '1.5em' }} />
               </Menu.Item>
             </a>
           </Menu.Menu>

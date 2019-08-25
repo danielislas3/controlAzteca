@@ -101,6 +101,13 @@ export default function Balance() {
       </center>
 
       </div>
+      <Link to="/credito">
+        <footer className="footer">
+            <center>
+              <h3>Estatus del credito</h3>
+            </center>
+          </footer>
+        </Link>
     </div>
   )
 }

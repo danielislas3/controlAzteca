@@ -3,6 +3,8 @@ import {withRouter} from 'react-router-dom'
 import { Form, Container, Table, Button } from 'semantic-ui-react'
 import UserService from '../services/users'
 import Swal from 'sweetalert2'
+import Navbar from './NavBar';
+
 
 
 const loggedUser = JSON.parse(localStorage.getItem('loggedUser'))
