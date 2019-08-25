@@ -9,6 +9,7 @@ export default function Signup() {
       <h1>Signup</h1>
 
       <ProgressBar variant="success" now={40} />
+      
 
 
     </div>
