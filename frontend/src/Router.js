@@ -5,6 +5,7 @@ import Login from './components/auth/Login'
 import Hola from './components/hola'
 import Dashboard from './components/Dashboard'
 import Credito from './components/CreditoStatus'
+import Balance from './components/Balance'
 
 export default function Router() {
   return(
@@ -15,6 +16,7 @@ export default function Router() {
       <Route exact path="/" component={Hola}/>
       <Route exact path="/dashboard" component={Dashboard}/>
       <Route exact path="/credito" component={Credito}/>
+      <Route exact path="/balance" component={Balance}/>
       </Switch>
     </BrowserRouter>
   )
