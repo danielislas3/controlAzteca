@@ -1,9 +1,31 @@
 import React, {Component} from 'react';
+import Navbar from './NavBar';
 import { Line } from 'react-chartjs-2';
+import Calculadora from './Calculadora';
 
 const data = {
   labels: [1,2,3,4,5,6,7,8,9,10],
   datasets: [
+    {
+      label: 'Promedio',
+      fill: false,
+      lineTension: 0.1,
+      backgroundColor: 'rgba(75,192,192,0.4)',
+      borderColor: 'rgba(75,17,42,1)',
+      borderCapStyle: 'butt',
+      borderDash: [],
+      borderDashOffset: 0.5,
+      borderJoinStyle: 'miter',
+      pointBackgroundColor: "rgb(255, 255, 255)",
+      pointBorderWidth: 2,
+      pointHoverRadius: 0,
+      pointHoverBackgroundColor: "rgb(0, 0, 0)",
+      pointHoverBorderColor: "rgba(220, 220, 220, 1)",
+      pointHoverBorderWidth: 2,
+      pointRadius: 1,
+      pointHitRadius: 10,
+      data: [3000,3000,3000,3000,3000,3000,3000,3000,3000,3000]
+    },
     {
       label: 'Votesprmedio',
       fill: false,
@@ -12,7 +34,7 @@ const data = {
       borderColor: 'rgba(75,192,192,1)',
       borderCapStyle: 'butt',
       borderDash: [],
-      borderDashOffset: 0.0,
+      borderDashOffset: 0.5,
       borderJoinStyle: 'miter',
       pointBackgroundColor: "rgb(255, 255, 255)",
       pointBorderWidth: 10,
@@ -28,11 +50,15 @@ const data = {
   ]
 };
 
-export default class Chart extends Component {
+export default class Dashboard extends Component {
   render() {
     return (
       <div>
-        <h2>Line Example</h2>
+      <Navbar></Navbar>
+      <br/>
+
+        <h2 style={{ marginTop: '3em' }}>¡Buenos dias!</h2>
+        <Calculadora/>
         <Line ref="chart" data={data}  options={{ responsive: true }} />
       </div>
     );
