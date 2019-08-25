@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.bancoazteca {
+  width: 175px;
+  height: 124px;
+  object-fit: contain;
+}
+.S-empezar {
+  
+  height: 19px;
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.21;
+  letter-spacing: normal;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+}
+.decorationNone{
+  text-decoration: none;
+}
+.flex{
+  display: flex;
+
+}
