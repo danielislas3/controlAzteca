@@ -4,6 +4,7 @@ import Signup from './components/auth/Signup'
 import Login from './components/auth/Login'
 import Hola from './components/hola'
 import Dashboard from './components/Dashboard'
+import Credito from './components/CreditoStatus'
 
 export default function Router() {
   return(
@@ -13,6 +14,7 @@ export default function Router() {
       <Route exact path="/signup" component={Signup}/>
       <Route exact path="/" component={Hola}/>
       <Route exact path="/dashboard" component={Dashboard}/>
+      <Route exact path="/credito" component={Credito}/>
       </Switch>
     </BrowserRouter>
   )

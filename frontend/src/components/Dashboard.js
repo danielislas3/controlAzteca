@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Navbar from './NavBar';
 import { Line } from 'react-chartjs-2';
 import Calculadora from './Calculadora';
-import { Input, Button } from 'semantic-ui-react'
+import { Button} from 'semantic-ui-react'
 
 const data = {
   labels: [1,2,3,4,5,6,7,8,9,10],
@@ -50,6 +50,20 @@ const data = {
 
   ]
 };
+let today = new Date();
+const hora = today.getHours() 
+let dd = today.getDate();
+let mm = today.getMonth() + 1; //January is 0!
+
+const yyyy = today.getFullYear();
+if (dd < 10) {
+  dd = '0' + dd;
+} 
+if (mm < 10) {
+  mm = '0' + mm;
+} 
+today = dd + '/' + mm + '/' + yyyy;
+console.log(today,hora)
 
 export default class Dashboard extends Component {
   render() {
@@ -58,8 +72,9 @@ export default class Dashboard extends Component {
       <Navbar></Navbar>
       <br/>
         <div>
-          <h2 style={{ marginTop: '25%', marginLeft:'1em'}}>¡Buenos dias!</h2>
-          <Input style={{ marginLeft:'2em'}} type="date"  size="mini" name="fecha" placeholder="fecha"/>
+            {(hora>1 && hora<=12)?  <h2 style={{ marginTop: '25%', marginLeft:'1em'}}>¡Buenos dias!</h2>:<h2 style={{ marginTop: '25%', marginLeft:'1em'}}>¡Buenas tardes!</h2>}
+          
+            <span style={{ marginLeft:'2em'}} > {today}</span>
           <div className="paddding">
           <Calculadora />
           <br/>
@@ -78,7 +93,6 @@ export default class Dashboard extends Component {
           <Button style={{backgroundColor:'#b82324', color:'white'}}> Gasto</Button>    
           <Button  style={{backgroundColor:'#17a54d', color:'white',marginLeft:'2vw'}}> Ingreso</Button>
         </center>
-
       </div>
     );
   }
