@@ -2,6 +2,7 @@ import React,{ useEffect } from 'react'
 import {Link} from 'react-router-dom'
 import {Container,Dropdown,Image,Menu} from 'semantic-ui-react'
 // import AuthService from '../services/auth';
+const loggedUser = JSON.parse(localStorage.getItem('loggedUser'))
 
 const Navbar = (props) => {
   // const authService = new AuthService()

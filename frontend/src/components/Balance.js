@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './NavBar';
 import {Header, Button } from 'semantic-ui-react'
 import Grafica from './Grafica';
+import {Link} from 'react-router-dom'
 
 export default function Balance() {
 
@@ -32,6 +33,13 @@ export default function Balance() {
       </center>
 
       </div>
+      <Link to="/credito">
+        <footer className="footer">
+            <center>
+              <h3>Estatus del credito</h3>
+            </center>
+          </footer>
+        </Link>
     </div>
   )
 }

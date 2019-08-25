@@ -8,19 +8,21 @@ import Gastos from './components/Gastos';
 import Dashboard from './components/Dashboard'
 import Credito from './components/CreditoStatus'
 import Balance from './components/Balance'
+import Documentos from './components/Documentos'
 
 export default function Router() {
   return (
     <BrowserRouter>
       <Switch>
-      <Route exact path="/login" component={Login} />
-      <Route exact path="/signup" component={Signup} />
-      <Route exact path="/" component={Hola} />
-      <Route exact path="/:id/ingresos" component={Ingreso}/>
-      <Route exact path="/:id/gastos" component={Gastos}/>
-      <Route exact path="/dashboard" component={Dashboard}/>
-      <Route exact path="/credito" component={Credito}/>
-      <Route exact path="/balance" component={Balance}/>
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/signup" component={Signup} />
+        <Route exact path="/" component={Hola} />
+        <Route exact path="/:id/ingresos" component={Ingreso}/>
+        <Route exact path="/:id/gastos" component={Gastos}/>
+        <Route exact path="/dashboard" component={Dashboard}/>
+        <Route exact path="/credito" component={Credito}/>
+        <Route exact path="/balance" component={Balance}/>
+        <Route exact path="/documentos" component={Documentos}/>
       </Switch>
     </BrowserRouter>
   )

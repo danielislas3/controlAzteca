@@ -4,6 +4,8 @@ import {Link} from 'react-router-dom'
 import Calculadora from './Calculadora';
 import { Button} from 'semantic-ui-react'
 import Grafica from './Grafica';
+const loggedUser = JSON.parse(localStorage.getItem('loggedUser'))
+
 
 
 let today = new Date();
@@ -48,9 +50,23 @@ export default class Dashboard extends Component {
         </div>
         <br/><br/>
         <center>
-          <Button style={{backgroundColor:'#b82324', color:'white'}}> Gasto</Button>    
-          <Button  style={{backgroundColor:'#17a54d', color:'white',marginLeft:'2vw'}}> Ingreso</Button>
+          <Link to={`/${loggedUser._id}/gastos`}>
+       
+          <Button style={{backgroundColor:'#b82324', color:'white'}}> Gasto</Button>   
+          </Link> 
+          <Link to={`/${loggedUser._id}/ingresos`}>
+           <Button  style={{backgroundColor:'#17a54d', color:'white',marginLeft:'2vw'}}> Ingreso</Button>
+          </Link>
+          <br/>
         </center>
+        <Link to="/credito">
+        <footer className="footer">
+            <center>
+              <h3>Estatus del credito</h3>
+            </center>
+          </footer>
+        </Link>
+
       </div>
     );
   }
