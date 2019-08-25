@@ -1,13 +1,13 @@
 .calculator {
   border: 1px solid #c6c6c6;
   position: fixed;
-  height: 100%;
-  width: 100%;
-  min-width: 320px;
-  min-height: 568px;
+  height: 50%;
+  width: 80%;
+  min-width: 250px;
+  min-height: 348px;
   max-width: 414px;
   max-height: 823px;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
 }

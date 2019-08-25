@@ -223,7 +223,7 @@ export default class CalculatorClass extends React.Component {
     return (
       <div>
         <div className="calculator">
-          <DisplayToolbar
+          <DisplayToolbar 
             formula={this.state.formula}
             input={this.state.input}
             onBackspace={this.onBackspace}

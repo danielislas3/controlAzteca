@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import {Image, Container, ButtonToolbar, Button} from 'react-bootstrap';
+import {Image, Container, Button} from 'react-bootstrap';
 
 export default function hola() {
  
