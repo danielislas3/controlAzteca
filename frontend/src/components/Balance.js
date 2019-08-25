@@ -5,7 +5,6 @@ import {Header, Button } from 'semantic-ui-react'
 import Grafica from './Grafica';
 import UserService from '../services/users'
 
-const loggedUser = JSON.parse(localStorage.getItem('loggedUser'))
 
 const userService = new UserService()
 
@@ -60,8 +59,7 @@ export default function Balance() {
     }
     return suma2
   }
-  console.log(ingresos ,'puto daniel')
-  console.log(gastos)
+
   let gastitos = sumGastos(gastos)
   let ingresitos = sumIngresos(ingresos)
 
@@ -69,7 +67,7 @@ export default function Balance() {
    return ((ingresito - gastito ) / 4 * 52 )/ Math.pow(1.01153,52)
     
   }
-  console.log(credit(gastitos, ingresitos))
+
 
   
   return (

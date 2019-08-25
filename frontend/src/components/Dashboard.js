@@ -19,7 +19,7 @@ if (mm < 10) {
   mm = '0' + mm;
 } 
 today = dd + '/' + mm + '/' + yyyy;
-console.log(today,hora)
+
 const loggedUser = JSON.parse(localStorage.getItem('loggedUser'))
 
 export default class Dashboard extends Component {
