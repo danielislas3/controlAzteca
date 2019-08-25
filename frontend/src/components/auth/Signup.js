@@ -9,7 +9,7 @@ class FormExampleSubcomponentControl extends Component {
   }
   componentDidMount(props) {
     const loggedUser = localStorage.getItem('loggedUser')
-    if (loggedUser) return this.props.history.push('/')
+    if (loggedUser) return this.props.history.push('/dashboard')
   }
   handleInput = e => {
     e.persist()

@@ -20,6 +20,7 @@ if (mm < 10) {
 } 
 today = dd + '/' + mm + '/' + yyyy;
 console.log(today,hora)
+const loggedUser = JSON.parse(localStorage.getItem('loggedUser'))
 
 export default class Dashboard extends Component {
   render() {
@@ -27,8 +28,10 @@ export default class Dashboard extends Component {
       <div>
       <Navbar></Navbar>
       <br/>
+      <br/>
+      <br/>
         <div>
-            {(hora>1 && hora<=12)?  <h2 style={{ marginTop: '25%', marginLeft:'1em'}}>¡Buenos dias!</h2>:<h2 style={{ marginTop: '25%', marginLeft:'1em'}}>¡Buenas tardes!</h2>}
+            {(hora>1 && hora<=12)?  <h2 style={{ marginTop: '25%', marginLeft:'1em'}}>¡Buenos dias {loggedUser.name}!</h2>:<h2 style={{ marginTop: '25%', marginLeft:'1em'}}>¡Buenas tardes!</h2>}
           
             <span style={{ marginLeft:'2em'}} > {today}</span>
           <div className="paddding">
@@ -36,6 +39,7 @@ export default class Dashboard extends Component {
           <br/>
           </div>
           <center>
+            <h3>Balance Mensual</h3>
             <Link to="/balance">
             <div > <Grafica/> </div>
             </Link>
@@ -48,8 +52,8 @@ export default class Dashboard extends Component {
         </div>
         <br/><br/>
         <center>
-          <Button style={{backgroundColor:'#b82324', color:'white'}}> Gasto</Button>    
-          <Button  style={{backgroundColor:'#17a54d', color:'white',marginLeft:'2vw'}}> Ingreso</Button>
+          <Link to={`/${loggedUser._id}/gastos`}><Button style={{ backgroundColor: '#b82324', color: 'white' }}> Gasto</Button> </Link>   
+          <Link to={`/${loggedUser._id}/ingresos`}><Button style={{ backgroundColor: '#17a54d', color: 'white', marginLeft: '2vw' }}> Ingreso</Button></Link>
         </center>
       </div>
     );

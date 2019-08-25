@@ -9,7 +9,7 @@ class Login extends Component {
   state = {}
   componentDidMount(props) {
     const loggedUser = localStorage.getItem('loggedUser')
-    if (loggedUser) return this.props.history.push('/')
+    if (loggedUser) return this.props.history.push('/dashboard')
   }
   handleInput = e => {
     e.persist()
@@ -25,7 +25,7 @@ class Login extends Component {
           .then(response => {
             //aquí deberia ir una notificacion o un swal o un toaster
             localStorage.setItem('loggedUser', JSON.stringify(response.data.user)) 
-              this.props.history.push(`/profile/${response.data.user._id}`)
+              this.props.history.push(`/dashboard`)
             
           })
           .catch(err => {

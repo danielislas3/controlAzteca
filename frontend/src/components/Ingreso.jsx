@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom'
-import { Form, Container, Table } from 'semantic-ui-react'
+import {withRouter} from 'react-router-dom'
+import { Form, Container, Table, Button } from 'semantic-ui-react'
 import UserService from '../services/users'
 import Swal from 'sweetalert2'
+
 
 const loggedUser = JSON.parse(localStorage.getItem('loggedUser'))
 
@@ -71,8 +72,8 @@ class Ingreso extends Component {
   render() {
     
     return (
+      
       <Container>
-        
         <br/>
         <br/>
         <center><h2>Ingresos</h2></center>
@@ -86,20 +87,17 @@ class Ingreso extends Component {
           <br/>
           <input name="tipo" hidden  />
           <br/>
-          <center><Form.Button color="green"  size="massive">Agregar</Form.Button></center>
+          <center><Form.Button color="green" size="massive">Agregar</Form.Button></center>
+          
         </Form>
         <br/>
+        <center><Button onClick={() => this.props.history.goBack()}>Volver</Button></center>
         <br/>
         <br/>
+       
       <h3>Registros anteriores</h3>
     <Table celled fixed singleLine>
-    {/* <Table.Header>
-      <Table.Row>
-        {/* <Table.HeaderCell>Descripción</Table.HeaderCell>
-        <Table.HeaderCell>Monto</Table.HeaderCell>
-        <Table.HeaderCell>Fecha</Table.HeaderCell> 
-      </Table.Row>
-    </Table.Header> */}
+
 
     <Table.Body>
       {this.state.transaction.length === 0 ?  <b><p>Aún no tienes ingresos registrados</p></b> :
@@ -119,4 +117,4 @@ class Ingreso extends Component {
   }
 }
 
-export default Ingreso
+export default withRouter(Ingreso)

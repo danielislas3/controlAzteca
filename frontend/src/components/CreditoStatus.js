@@ -13,7 +13,7 @@ export default function CreditoStatus() {
         <Header textAlign="center" style={{fontFamily:'Lato'}} as="h2" >Estado del Crédito</Header>
         <br/>
         <div>
-         <List verticalAlign='middle' horizontalA>
+         <List verticalAlign='middle' >
 
           <List.Item>
              {true?  <Image src='img/monedasderbol/moneda5-vacia.png' size="tiny"/>: <Image src='img/monedasderbol/moneda5-color.png' size="tiny"/>}
@@ -26,7 +26,7 @@ export default function CreditoStatus() {
           <List.Item>
              {true?  <Image src='img/monedasderbol/moneda4-vacia.png' size="tiny"/>: <Image src='img/monedasderbol/moneda4-color.png' size="tiny"/>}
             <List.Content>
-              <List.Header>Tu crédito está aprobado </List.Header>
+              <List.Header>Tu crédito está pre-aprobado </List.Header>
             </List.Content>
           </List.Item>
 

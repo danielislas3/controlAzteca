@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom'
-import { Form, Container, Table } from 'semantic-ui-react'
+import { Form, Container, Table, Button} from 'semantic-ui-react'
 import UserService from '../services/users'
 import Swal from 'sweetalert2'
+
 
 const loggedUser = JSON.parse(localStorage.getItem('loggedUser'))
 
@@ -71,8 +71,8 @@ class Gasto extends Component {
   render() {
     
     return (
+      
       <Container>
-        
         <br/>
         <br/>
         <center><h2>Gastos</h2></center>
@@ -86,8 +86,11 @@ class Gasto extends Component {
           <br/>
           <input name="tipo" hidden  />
           <br/>
-          <center><Form.Button color="red"  size="massive">Agregar</Form.Button></center>
+          <center><Form.Button color="red" size="massive">Agregar</Form.Button></center>
+          
         </Form>
+        <br/>
+        <center><Button onClick={() => this.props.history.goBack()}>Volver</Button></center>
         <br/>
         <br/>
         <br/>
